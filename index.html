@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="bootstrap.css">
+
 <head>
     <meta charset="UTF-8">
     <title>Jamie Potter</title>
@@ -9,6 +10,24 @@
 <h1> Jamie Potter </h1>
 </div>
 
+<body>
+<script>
+function openTab(evt, tabName) {
+   var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+</body>
 <!-- Tabs -->
 <div class="tab">
 <button class="tablinks" onclick="openTab(event, 'About'"> about</button>
@@ -19,8 +38,9 @@
 <!-- Tab content -->
 <div id="about" class="tabcontent">
     <h4> about </h4>
-    <p> about info will go here </p>
+
     <img src="https://i.vimeocdn.com/portrait/48326650_100x100.webp?subrect=17%2C245%2C1061%2C1289&r=cover" alt="Headshot">
+<p> About info will go here </p>
 </div>
 
 <div id="portfolio" class="tabcontent">
@@ -30,15 +50,11 @@
 
 <div id="contact" class="tabcontent">
 <h4> contact </h4>
-    <p> contact info will go here</p>
+    <p>Email </p>
 </div>
 
 
 
-<script>
-function openTab(event, tabName) {
-var i, tabcontent, tablinks;
 
-</script>
 
 </html>
